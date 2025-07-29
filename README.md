@@ -42,7 +42,7 @@ While the first version is functional, further improvements are planned:
 
 This application is developed and maintained by Daphnée ERNEST as part of my work in product-oriented web development.
 
-Feel free to contact me at [your.email@example.com](mailto:daphnee.ernest@gmail.com)  
+Feel free to contact me at [mail](mailto:daphnee.ernest@gmail.com)  
 Or connect on [LinkedIn](https://linkedin.com/in/daphnee-ernest)
 
 ---
