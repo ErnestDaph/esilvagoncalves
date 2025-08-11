@@ -18,7 +18,6 @@ The portfolio is designed as a **professional showcase** to:
 The application is built using:
 
 - **React** with **TypeScript** – for a robust, component-based architecture
-- **Tailwind CSS** – to ensure a clean, modern, and responsive UI
 
 ## 🧩 Key Features
 
