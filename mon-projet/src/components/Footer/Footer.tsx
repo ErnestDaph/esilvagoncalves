@@ -15,9 +15,9 @@ function Footer() {
                 <div className={styles.footerInformation}>
                     <h3>Informations</h3>
                     <ul>
-                    <li><a href="CV.pdf" download>Télécharger mon CV</a></li>
-                    <li><a href="mailto:esilvagoncalvesdylan@gmail.com">Ecrivez-moi</a></li>
-                    <li><a href="tel:+33780359606"> Appelez-moi</a></li>
+                    <li><a href="CV.pdf" download>Télécharger mon CV 📃</a></li>
+                    <li><a href="mailto:esilvagoncalvesdylan@gmail.com">Ecrivez-moi 📧</a></li>
+                    <li><a href="tel:+33780359606"> Appelez-moi 📞: 07 80 35 96 06</a></li>
                     </ul>
                 </div>
 
