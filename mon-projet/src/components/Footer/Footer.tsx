@@ -1,4 +1,4 @@
-
+import React from "react";;
 import styles from "./Footer.module.css";
 import LinkedinLogo from '../../assets/icons/linkedinLogo.png';
 import TiktokLogo from '../../assets/icons/tiktokLogo.png';
@@ -16,8 +16,8 @@ function Footer() {
                     <h3>Informations</h3>
                     <ul>
                     <li><a href="CV.pdf" download>Télécharger mon CV</a></li>
-                    <li><a href="mailto:esilvagoncalvesdylan@gmail.com">Ecrivez-moi à esilvagoncalvesdylan@gmail.com</a></li>
-                    <li><a href="tel:+33780359606"> Appelez-moi au 07 80 35 96 06</a></li>
+                    <li><a href="mailto:esilvagoncalvesdylan@gmail.com">Ecrivez-moi</a></li>
+                    <li><a href="tel:+33780359606"> Appelez-moi</a></li>
                     </ul>
                 </div>
 
@@ -32,7 +32,7 @@ function Footer() {
             </section>  
             <section> 
                 <div className={styles.footerCopyright}>
-                    <p>© Dylan E Silva Goncalves – Année {new Date().getFullYear()}</p>
+                    <p>© Dylan E Silva Goncalves –  {new Date().getFullYear()}</p>
                 </div>
             </section>
         </footer>

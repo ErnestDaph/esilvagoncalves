@@ -73,7 +73,8 @@
 .menu li a:hover{
     background-color: var(--primary-color);
     color: var(--thirdary-color);
-    outline:none
+    outline:none;
+    border-radius: 15px;
   }
 /* Desktop styles */
 @media (min-width: 768px) {
