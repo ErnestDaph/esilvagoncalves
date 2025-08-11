@@ -1,5 +1,5 @@
 
-import styles from "./Contact.module.css";
+import styles from "../Contact/Contact.module.css";
 import portraitDylan from "../../assets/images/PortraitDylan.png";
 
 const Contact = () =>{
