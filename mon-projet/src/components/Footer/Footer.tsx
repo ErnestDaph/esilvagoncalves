@@ -2,6 +2,7 @@
 import styles from "./Footer.module.css";
 import LinkedinLogo from '../../assets/icons/linkedinLogo.png';
 import TiktokLogo from '../../assets/icons/tiktokLogo.png';
+import YoutubeLogo from '../../assets/icons/youtubeLogo.png';
 
 
 
@@ -25,11 +26,10 @@ function Footer() {
                     <ul>
                         <li><a href="https://www.linkedin.com/in/dylan-esilva/" target="_blank" rel="noopener noreferrer"><img src={LinkedinLogo} alt="LinkedIn" /></a></li>
                         <li><a href="https://www.tiktok.com/@honda.purple" target="_blank" rel="noopener noreferrer"><img src={TiktokLogo} alt="TikTok" /></a></li>
-                        {/* <li><a href="https://youtube.com/shorts/E_0sEITO13s?si=nrJCs_nr8IL2B3eH" target="_blank" rel="noopener noreferrer"><img src={YoutubeLogo} alt="YouTube" /></a></li> */}
+                        <li><a href="https://youtube.com/shorts/E_0sEITO13s?si=nrJCs_nr8IL2B3eH" target="_blank" rel="noopener noreferrer"><img src={YoutubeLogo} alt="YouTube" /></a></li>
                     </ul>
                 </div>
-
-            </section>                
+            </section>  
             <section> 
                 <div className={styles.footerCopyright}>
                     <p>© Dylan E Silva Goncalves – Année {new Date().getFullYear()}</p>
