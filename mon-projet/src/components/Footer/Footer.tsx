@@ -1,12 +1,9 @@
-import React from 'react';
-import { useState } from 'react';
+
 import styles from "./Footer.module.css";
 
 
 function Footer() {
-    const [isOpen, setIsOpen] = useState<boolean>(false);
 
-    const toggleMenu = () => setIsOpen(prev => !prev);
 
     return (
         <footer className={styles.footer}>
@@ -25,9 +22,12 @@ function Footer() {
                         <li><a href="https://www.tiktok.com/@honda.purple" target="_blank" rel="noopener noreferrer"><img src="/tiktok-icon.png" alt="TikTok" /></a></li>
                     </ul>
                 </div>
-            </section>
-            <section>
-                
+                <div>
+                    
+                </div>
+                <div className={styles.footerCopyright}>
+                    <p>© Dylan E Silva Goncalves – Année {new Date().getFullYear()}</p>
+                </div>
             </section>
         </footer>
     );
