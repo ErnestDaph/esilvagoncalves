@@ -8,6 +8,7 @@
 .footer{
     color: var(--primary-color);
     background-color: var(--thirdary-color);
+    height: 40vh;
 }
 img{
     width: auto;
@@ -50,7 +51,7 @@ img{
     text-align: center;
     margin-top: 20px;
     padding-top: 10px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #ddd; ;
 }
 /* Desktop version */
 @media (min-width: 768px) {

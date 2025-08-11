@@ -1,0 +1,126 @@
+:root {
+    --primary-color: #F0E1D1;
+    --secondary-color: #3967a7;
+    --thirdary-color: #0e1a27;
+}
+
+.H1Container {
+    width: auto;
+    height: auto;
+    margin: 20px 0;
+}
+
+H1, H2 {
+     text-align: left;
+     margin: 0.5rem 0;
+     color: var(--thirdary-color);
+}
+
+.H1Subtitle, .H2Subtitle {
+    text-align: left;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    color: var(--thirdary-color);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.H1Container,
+.h2Container,
+.H1Title,
+.H1Subtitle,
+.portrait,
+.H2Subtitle {
+  margin: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portrait img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.H2Subtitle ul,
+.socialMedia ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0;
+  text-align: left;
+  display: block;
+  gap: 1rem;
+}
+
+.H2Subtitle ul li p {
+  margin: 0.25rem 0;
+}
+
+/* --- Desktop version (à partir de 768px) --- */
+@media (min-width: 768px) {
+  /* Sections prennent toute la largeur de l’écran */
+  section {
+    height: auto;
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  /* Conteneurs gardent une marge, mais on enlève max-width sur d'autres sauf .h2Container */
+  .H1Container,
+  .H1Title,
+  .H1Subtitle,
+  .portrait,
+  .H2Subtitle {
+    margin: 1rem auto;
+    max-width: none;
+  }
+
+  /* Pour .h2Container on limite la largeur max et on centre */
+  .h2Container {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    max-width: 600px; /* Même max-width que le paragraphe sous H1 */
+    margin: 2rem auto; /* Centre horizontalement */
+    width: 100%; /* Prend toute la largeur jusqu'à max-width */
+    box-sizing: border-box;
+  }
+
+  .portrait {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    flex: 0 0 300px;
+    margin-right: 2rem;
+  }
+
+  .portrait img {
+    margin: 0;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    display: block;  }
+
+  .H2Subtitle {
+    flex: 1;
+    text-align: left;
+  }
+
+  .H2Subtitle ul {
+    justify-content: flex-start;
+  }
+}
