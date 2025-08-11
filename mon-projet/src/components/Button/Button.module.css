@@ -1,0 +1,30 @@
+:root {
+    --primary-color: #F0E1D1;
+    --secondary-color: #3967a7;
+    --thirdary-color: #0e1a27;
+}
+
+.button{
+    border-radius : 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    user-select: none;
+}
+.primary{
+    background-color: var(--thirdary-color);
+    color: var(--primary-color);
+}
+.primary:hover{
+    background-color: var(--primary-color);
+    color: var(--thirdary-color);
+}
+.secondary{
+    background-color: var(--primary-color);
+    color: var(--thirdary-color);
+}
+.secondary:hover{
+    background-color: var(--thirdary-color);
+    color: var(--primary-color);
+}
