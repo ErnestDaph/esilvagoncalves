@@ -6,16 +6,16 @@ type ButtonVariant = "primary" | "secondary";
 interface ButtonProps {
   variant?: ButtonVariant;
   children: React.ReactNode;
-  onclick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ variant = "primary", children, onclick }) => {
+const Button: React.FC<ButtonProps> = ({ variant = "primary", children, onClick }) => {
   const [currentVariant, setCurrentVariant] = useState<ButtonVariant>(variant);
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     setCurrentVariant(currentVariant === "primary" ? "secondary" : "primary");
-    if (onclick) {
-      onclick(e);
+    if (onClick) {
+      onClick(e);
     }
   };
 

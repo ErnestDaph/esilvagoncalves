@@ -9,13 +9,31 @@
     height: auto;
     margin: 20px 0;
 }
-
+.h2ContentTitle{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+}
 H1, H2, H3, H4, legend {
      text-align: left;
      margin: 0.5rem 0;
      color: var(--thirdary-color);
 }
-
+.timelineContent, h3{
+  color: var(--primary-color)
+}
+.h3Title{
+  color: var(--thirdary-color);
+}
+a{
+  color: var(--thirdary-color);
+  text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    color: var(--thirdary-color);
+}
 legend{
     display: flex;
     justify-content: center;
@@ -33,7 +51,34 @@ legend{
     background-color: var(--primary-color);
     border-radius: 5px;
 }
-
+.contenainerList {
+    justify-self: unset;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    color: var(--thirdary-color);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+.containerList,.passionList{
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  padding: 10px;
+}
+.pContainer{
+  color: var(--thirdary-color);
+  border-radius: 5px;
+  padding: 10px;
+}
+ul, li, span {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--thirdary-color);
+}
 section {
     display: flex;
     flex-direction: column;
@@ -43,7 +88,19 @@ section {
     padding: 0 1rem;
     box-sizing: border-box;
 }
+.buttonContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timelineItem {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
 
+ 
+}
 .H1Container,
 .h2Container,
 .H1Title,
@@ -63,6 +120,51 @@ section {
   margin: 0 auto;
 }
 
+.timeline {
+  position: relative;
+  margin: 30px 0;
+  padding-left: 30px;
+  border-left: 3px solid var(--thirdary-color);
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timelineItem::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 10px;
+  width: 18px;
+  height: 18px;
+  background: var(--thirdary-color);
+  border-radius: 50%;
+}
+
+.timelineDate {
+  font-weight: bold;
+  color: var(--thirdary-color);
+  margin-bottom: 5px;
+}
+
+.timelineContent {
+  background: var(--thirdary-color);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.timelineImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 
 /* --- Desktop version (à partir de 768px) --- */
 @media (min-width: 768px) {
@@ -73,7 +175,7 @@ section {
     padding: 0 2rem;
   }
 
-  /* Conteneurs gardent une marge, mais on enlève max-width sur d'autres sauf .h2Container */
+  /* Conteneurs gardent une marge */
   .H1Container,
   .H1Title,
   .H1Subtitle,
@@ -89,7 +191,7 @@ section {
     align-items: flex-start;
 
     max-width: 600px; /* Même max-width que le paragraphe sous H1 */
-    margin: 2rem auto; /* Centre horizontalement */
+    /* margin: 2rem auto; Centre horizontalement */
     width: 100%; /* Prend toute la largeur jusqu'à max-width */
     box-sizing: border-box;
   }
