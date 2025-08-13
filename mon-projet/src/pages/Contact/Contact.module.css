@@ -46,6 +46,7 @@ section {
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
+  padding: 1rem;
 }
 
 .portrait img{
@@ -53,6 +54,7 @@ section {
   height: auto;
   display: block;
   margin: 0 auto;
+  border-radius: 15px;
 }
 
 .H2Subtitle ul,
@@ -68,7 +70,31 @@ section {
 .H2Subtitle ul li p {
   margin: 0.25rem 0;
 }
+.CVcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+.CVcontainer a {
+  text-decoration: none;
+  color: var(--thirdary-color);
+  outline:none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.CVcontainer a:hover {
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 10px;
+  color: var(--primary-color);
+  background-color: var(--thirdary-color);
+}
 
+.lastSection{
+  color: var(--thirdary-color);
+}
 /* --- Desktop version (à partir de 768px) --- */
 @media (min-width: 768px) {
   /* Sections prennent toute la largeur de l’écran */
@@ -92,10 +118,12 @@ section {
   .h2Container {
     flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
 
-    max-width: 600px; /* Même max-width que le paragraphe sous H1 */
+    max-width: 900px; /* Même max-width que le paragraphe sous H1 */
+    height: auto;
     margin: 2rem auto; /* Centre horizontalement */
+
     width: 100%; /* Prend toute la largeur jusqu'à max-width */
     box-sizing: border-box;
   }
@@ -118,6 +146,7 @@ section {
   .H2Subtitle {
     flex: 1;
     text-align: left;
+    padding: 1rem;;
   }
 
   .H2Subtitle ul {

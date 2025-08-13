@@ -11,9 +11,9 @@ const Contact = () =>{
         </div>
         <div className={styles.H1Subtitle}>
             <p>Vous avez un projet ou une envie de booster votre présence ? 
-            Mon expertise s'étend du conseil client à la fidélisation sur-mesure en passant par l'animation des réseaux sociaux. Je serais ravi de vous accompagner pour créer une vraie connexion avec votre communauté et faire grandir votre visibilité. 
-            Diplômé d'un Master en Management et Stratégie d'Entreprise, et bientôt étudiant en Master Entrepreneuriat, je serai disponible dès octobre 2025 pour collaborer avec vous. 
-            Me contacter c'est avoir l'assurance de construire ensembles vos prochains succès ! Qu'attendez-vous ?</p>
+            Mon expertise s'étend du <strong>conseil client à la fidélisation</strong> sur-mesure en passant par l'animation des réseaux sociaux. Je serais ravi de vous accompagner pour créer une connexion avec votre communauté et <strong>faire grandir votre visibilité.</strong> Diplômé 
+            d'un Master en Management et Stratégie d'Entreprise, je serais disponible dès octobre 2025 pour collaborer avec vous. 
+            Me contacter c'est avoir l'assurance de construire ensemble vos prochains succès ! Qu'attendez-vous ?</p>
         </div>
       </section>
       <section className={styles.h2Container}>
@@ -21,10 +21,16 @@ const Contact = () =>{
             <img src={portraitDylan} alt="Dylan" />
         </div>
         <div className={styles.H2Subtitle}>
-            <h2>Contactez-moi dès à présent  </h2>
+            <h2>▪️ Embarquez mon parcours avec vous</h2>
+            <div className={styles.CVcontainer}>
+            <a href="CV_DylanE.pdf" download> 📩 Télécharger mon CV 📩</a>
+            </div>
+            <h2>▪️ Construisons la suite ensemble  </h2>
             <p> par téléphone 📱 : 07 80 35 96 06</p>
             <p> par mail 📧 : esilvagoncalvesdylan@gmail.com</p>
-            <p>Je suis impatient de vous lire et de discuter de vos projets !</p>
+              <div className={styles.lastSection}>
+                <p><em> "Je suis impatient de vous lire et de discuter de vos projets !"</em></p>
+              </div>
         </div>
       </section>
       </>

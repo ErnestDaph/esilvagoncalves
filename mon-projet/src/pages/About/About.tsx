@@ -11,29 +11,38 @@ const About = () => {
   const experiences = [
     {
       title: "Chargé de développement",
-      description: "Fidélisation des clients, prospection et développement commercial",
+      description: "Accompagnement dans l'achat des produits et la fidélisation de la clientèle. Animation d’événements sportifs tels que marathons et trails.",
       image: portraitDylan,
-      date: "2023 - Aujourd'hui",
+      date: "2022 - Aujourd'hui",
+    },
+    {
+      title: "Community manager",
+      description: "Développement et animation de la présence digitale de la marque via les réseaux sociaux. Création de contenu engageant, interaction avec la communauté et mise en place de stratégies visant à accroître la visibilité.",
+      image: instaPassion,
+      date: "2022 - Aujourd'hui",
     },
     {
       title: "Créateur de contenu",
-      description: "Description de l'expérience en tant que créateur de contenu",
-      image: instaPassion,
-      date: "2020 - Aujourd'hui",
-    },
-    {
-      title: "Sapeur Pompier Volontaire",
-      description: "Description de l'expérience en tant que Sapeur Pompier Volontaire",
+      description: "Création de contenu vidéo et gestion d'une communauté en ligne. Production de vidéos sur YouTube, animation de lives Twitch et interaction avec la communauté.",
       image: portraitDylan,
-      date: "2018 - 2024",
+      date: "2020 - Aujourd'hui",
     },
   ];
  const degree = [
-      {
-      title: "Chargé de développement",
-      description: "Fidélisation des clients, prospection et développement commercial",
+    {
+      title: "Master Management et stratégie d'entreprise",
       image: portraitDylan,
-      date: "2023 - Aujourd'hui",
+      date: "2025",
+    },
+       {
+      title: "Licence Professionnelle Commerce et Distribution",
+      image: portraitDylan,
+      date: "2023",
+    },
+    {
+      title: "Baccalauréat +2 Technique de Commercialisation",
+      image: portraitDylan,
+      date: "2022",
     },
  ]
   return (
@@ -79,7 +88,6 @@ const About = () => {
                   <img src={experience.image} alt={experience.title} className={styles.timelineImage} />
                   <div>
                     <h3>{experience.title}</h3>
-                    <p>{experience.description}</p>
                   </div>
                 </div>
               </div>
@@ -125,25 +133,32 @@ const About = () => {
           </ul>
         </div>
       </section>
+      {/* Formation */}
       <section className={styles.formation}>
         <h2>Formation</h2>
         <p className={styles.formationText}>
           Un parcours académique solide: à retravailler sous la forme d'une frise chronologique
         </p>
-
-        <div className={styles.timeline}>
-            {/* 
-          <div className={styles.timelineItem}>
-            <span className={styles.timelineDate}>2025 - 2027</span>
-            <span className={styles.timelineTitle}>Master Entrepreneuriat en alternance</span>
+          <div className={styles.timeline}>
+            {degree.map((degree, index) => (
+              <div key={index} className={styles.timelineItem}>
+                <span className={styles.timelineDate}>{degree.date}</span>
+                <div className={styles.timelineContent}>
+                  <img src={degree.image} alt={degree.title} className={styles.timelineImage} />
+                  <div>
+                    <h3>{degree.title}</h3>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-            */}
-          <div className={styles.timelineItem}>
-            <span className={styles.timelineDate}>2020 - 2025</span>
-            <span className={styles.timelineTitle}>Master Management et Stratégie d'Entreprise</span>
+          <div className={styles.buttonContainer}>
+            <Button variant="primary" onClick={() => navigate("/experiences")}>
+              Voir les détails
+            </Button>
           </div>
-        </div>
       </section>
+      {/* Valeurs et motivations */}
       <section className={styles.h2Container}>
             <div className={styles.h2ContentTitle}>
                 <h2>Mes valeurs et motivations</h2>
