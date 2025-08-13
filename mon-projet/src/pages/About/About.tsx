@@ -11,19 +11,19 @@ const About = () => {
   const experiences = [
     {
       title: "Chargé de développement",
-      description: "Accompagnement dans l'achat des produits et la fidélisation de la clientèle. Animation d’événements sportifs tels que marathons et trails.",
+      description: "CDD",
       image: portraitDylan,
       date: "2022 - Aujourd'hui",
     },
     {
       title: "Community manager",
-      description: "Développement et animation de la présence digitale de la marque via les réseaux sociaux. Création de contenu engageant, interaction avec la communauté et mise en place de stratégies visant à accroître la visibilité.",
+      description: "CDD",
       image: instaPassion,
       date: "2022 - Aujourd'hui",
     },
     {
       title: "Créateur de contenu",
-      description: "Création de contenu vidéo et gestion d'une communauté en ligne. Production de vidéos sur YouTube, animation de lives Twitch et interaction avec la communauté.",
+      description: "Auto-entrepreneur",
       image: portraitDylan,
       date: "2020 - Aujourd'hui",
     },
@@ -31,20 +31,51 @@ const About = () => {
  const degree = [
     {
       title: "Master Management et stratégie d'entreprise",
+      description :"Keyce Academy",
       image: portraitDylan,
       date: "2025",
     },
        {
       title: "Licence Professionnelle Commerce et Distribution",
+      description: "Institut Universitaire d'Avignon",
       image: portraitDylan,
       date: "2023",
     },
     {
       title: "Baccalauréat +2 Technique de Commercialisation",
+      description: "Institut Universitaire d'Avignon",
       image: portraitDylan,
       date: "2022",
     },
  ]
+ const motivation = [
+   {
+     title: "Apprentissage en continu",
+     description :"J'ai envie d'apprendre de nouvelles compétences et de me former en permanence.",
+     image: portraitDylan,
+   },
+   {
+     title: "Relever des défis",
+     description :"J'aime sortir de ma zone de confort et relever de nouveaux défis.",
+     image: portraitDylan,
+   },
+   {
+     title: "Créer et innover",
+     description :"J'aime concevoir des projets originaux et trouver des solutions créatives.",
+     image: portraitDylan,
+   },
+   {
+     title: "Contribuer à des projets",
+     description :"J'aime m'investir dans des projets qui ont du sens et qui contribuent à un objectif commun.",
+     image: portraitDylan,
+   },
+   {
+     title: "Sens du détail",
+     description :"J'accorde une attention particulière aux détails pour garantir la qualité du travail.",
+     image: portraitDylan,
+   },
+ ];
+
   return (
     <>
       {/* Header */}
@@ -88,6 +119,7 @@ const About = () => {
                   <img src={experience.image} alt={experience.title} className={styles.timelineImage} />
                   <div>
                     <h3>{experience.title}</h3>
+                    <p>{experience.description}</p>
                   </div>
                 </div>
               </div>
@@ -133,7 +165,7 @@ const About = () => {
           </ul>
         </div>
       </section>
-      {/* Formation */}
+      {/* Portrait + expériences (frise verticale) */}
       <section className={styles.formation}>
         <h2>Formation</h2>
         <p className={styles.formationText}>
@@ -147,6 +179,7 @@ const About = () => {
                   <img src={degree.image} alt={degree.title} className={styles.timelineImage} />
                   <div>
                     <h3>{degree.title}</h3>
+                    <p>{degree.description}</p>
                   </div>
                 </div>
               </div>
@@ -164,7 +197,16 @@ const About = () => {
                 <h2>Mes valeurs et motivations</h2>
             </div>
             <div className={styles.h2Content}>
-                <p>Ce qui m'anime, c'est l'envie de créer, d'oser et de donner vie à des idées qui comptent.</p>
+                <p><em>" Ce qui m'anime, c'est l'envie de créer, d'oser et de donner vie à des idées qui comptent." </em></p>
+            </div>
+            <div className={styles.motivationList}>
+                <ul>
+                    {motivation.map((item, index) => (
+                        <li key={index}>
+                            <strong>{item.title}:</strong> {item.description}
+                        </li>
+                    ))}
+                </ul>
             </div>
       </section>
 
