@@ -25,6 +25,7 @@ H1, H2, H3, H4, legend {
 }
 .h3Title{
   color: var(--thirdary-color);
+  font-size: 20px;
 }
 a{
   color: var(--thirdary-color);
@@ -95,8 +96,9 @@ section {
 }
 .timelineItem {
     display: flex;
-    gap: 1rem;
-    align-items: center;
+    flex-direction: column;
+    align-content: flex-start;
+    /* align-items: center; */
     width: 100%;
 
  
@@ -145,8 +147,13 @@ section {
 
 .timelineDate {
   font-weight: bold;
+  font-size: large;
+  margin-top: 5px;
+  padding-left: 20px;
+  border: var(--thirdary-color) 1px solid;
+  border-radius: 5px;
   color: var(--thirdary-color);
-  margin-bottom: 5px;
+  background-color: var(--primary-color);
 }
 
 .timelineContent {
@@ -157,6 +164,7 @@ section {
   display: flex;
   gap: 15px;
   align-items: center;
+  margin-top: 10px;
 }
 
 .timelineImage {
