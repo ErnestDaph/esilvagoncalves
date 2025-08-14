@@ -1,9 +1,20 @@
 import React from "react";
 import styles from "../About/About.module.css";
+import { useNavigate } from "react-router-dom";
+
+/*Component Import*/
+import Button from "../../components/Button/Button";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
+
+/*Image Import*/
 import portraitDylan from "../../assets/images/PortraitDylan.png";
 import instaPassion from "../../assets/images/instaPassion.png";
-import Button from "../../components/Button/Button";
-import { useNavigate } from "react-router-dom";
+import challengeIcon from "../../assets/icons/challengeIcon.png";
+import innovationIcon from "../../assets/icons/innovationIcon.png";
+import learningIcon from "../../assets/icons/learningIcon.png";
+import managementIcon from "../../assets/icons/managementIcon.png";
+import detailsIcon from "../../assets/icons/detailsIcon.png";
+
 
 const About = () => {
   const navigate = useNavigate();
@@ -52,27 +63,27 @@ const About = () => {
    {
      title: "Apprentissage en continu",
      description :"J'ai envie d'apprendre de nouvelles compétences et de me former en permanence.",
-     image: portraitDylan,
+     image: learningIcon,
    },
    {
      title: "Relever des défis",
      description :"J'aime sortir de ma zone de confort et relever de nouveaux défis.",
-     image: portraitDylan,
+     image: challengeIcon,
    },
    {
      title: "Créer et innover",
      description :"J'aime concevoir des projets originaux et trouver des solutions créatives.",
-     image: portraitDylan,
+     image: innovationIcon,
    },
    {
      title: "Contribuer à des projets",
      description :"J'aime m'investir dans des projets qui ont du sens et qui contribuent à un objectif commun.",
-     image: portraitDylan,
+     image: managementIcon,
    },
    {
      title: "Sens du détail",
      description :"J'accorde une attention particulière aux détails pour garantir la qualité du travail.",
-     image: portraitDylan,
+     image: detailsIcon,
    },
  ];
 
@@ -203,7 +214,7 @@ const About = () => {
                 <ul>
                     {motivation.map((item, index) => (
                         <li key={index}>
-                            <strong>{item.title}:</strong> {item.description}
+                            <strong>{item.title} <img src={item.image} alt={item.title} /></strong>: {item.description}
                         </li>
                     ))}
                 </ul>
@@ -216,12 +227,12 @@ const About = () => {
           <h3 className={styles.h3Title}>Mes autres centres d'intérêt</h3>
           <div className={styles.passionList}>
             <ul>
-              <li>Création de contenu vidéo sur réseaux sociaux (Youtube, Instagram)</li>
-              <li>Le sport : pratique du foot en club depuis plus de 6 ans</li>
-              <li>Gestionnaire d'une communauté en ligne (Discord, YouTube)</li>
+              <li> ▪️ Création de contenu vidéo sur réseaux sociaux (Youtube, Instagram)</li>
+              <li> ▪️ Pratique du foot depuis 10 ans</li>
+              <li> ▪️ Gestionnaire d'une communauté en ligne (Discord, YouTube)</li>
             </ul>
+             {/* <ProjectCard/> */}
           </div>
-
           <div className={styles.pContainer}>
             <p>Prêt à relever de nouveaux défis ? <a href="/contact">Contactez-moi !</a></p>
           </div>

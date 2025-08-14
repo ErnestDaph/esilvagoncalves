@@ -1,0 +1,23 @@
+:root{
+    --primary-color: #F0E1D1;
+    --secondary-color: #3967a7;
+    --thirdary-color: rgb(14, 26, 39);
+    --fourthary-color: rgba(14, 26, 39, 0.89);
+}
+/* Mobile version*/
+.projectCard{
+    background-color: var(--fourthary-color);
+    border-radius: 8px;
+    padding: 10px;
+    flex-direction: row;
+}
+
+/* Desktop version*/
+@media (max-width: 768px) {
+    .projectCard {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
