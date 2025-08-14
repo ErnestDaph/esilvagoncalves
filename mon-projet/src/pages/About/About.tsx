@@ -10,7 +10,6 @@ import runningConseilLogo from "../../assets/images/runningConseilLogo.png"
 import iutLogo from "../../assets/images/iutLogo.png";
 import keyceLogo from "../../assets/images/keyceLogo.png";
 import contentCreation from "../../assets/images/contentCreation.jpg";
-import instaPassion from "../../assets/images/instaPassion.png";
 import challengeIcon from "../../assets/icons/challengeIcon.png";
 import innovationIcon from "../../assets/icons/innovationIcon.png";
 import learningIcon from "../../assets/icons/learningIcon.png";
@@ -31,7 +30,7 @@ const About = () => {
     {
       title: "Community manager",
       description: "CDD",
-      image: instaPassion,
+      image: runningConseilLogo,
       date: "2022 - Aujourd'hui",
     },
     {
