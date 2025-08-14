@@ -1,10 +1,8 @@
-import React from "react";
 import styles from "../About/About.module.css";
 import { useNavigate } from "react-router-dom";
 
 /*Component Import*/
 import Button from "../../components/Button/Button";
-import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
 /*Image Import*/
 import portraitDylan from "../../assets/images/PortraitDylan.png";
@@ -217,7 +215,7 @@ const About = () => {
                   <img src={degree.image} alt={degree.title} className={styles.timelineImage} />
                   <div>
                     <h3>{degree.title}</h3>
-                    <p>{degree.description}</p>
+                    <p className={styles.timelineDescription}>{degree.description}</p>
                   </div>
                 </div>
               </div>
