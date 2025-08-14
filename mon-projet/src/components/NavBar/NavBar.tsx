@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState } from 'react';
 import styles from "./NavBar.module.css";
 import DylanAvatar from '../../assets/icons/DylanAvatar.png'

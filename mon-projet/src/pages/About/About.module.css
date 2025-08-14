@@ -74,7 +74,7 @@ legend{
   border-radius: 5px;
   padding: 10px;
 }
-ul, li, span {
+ul, li, span, p{
   list-style: none;
   padding: 0;
   margin: 0;
@@ -89,6 +89,7 @@ section {
     padding: 0 1rem;
     box-sizing: border-box;
 }
+
 .buttonContainer{
   display: flex;
   justify-content: center;
@@ -98,7 +99,6 @@ section {
     display: flex;
     flex-direction: column;
     align-content: flex-start;
-    /* align-items: center; */
     width: 100%;
 
  
@@ -116,10 +116,12 @@ section {
 }
 
 .portrait img{
+  width: 50%;
   max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
+  border-radius: 10px
 }
 
 .timeline {
@@ -173,7 +175,17 @@ section {
   border-radius: 50%;
   object-fit: cover;
 }
+.motivationList img{
+  width: 30px;
+  height: 30px;
+  margin: 5px 5px 0 0;
 
+}
+.motivationList, .interestList{
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+}
 /* --- Desktop version (à partir de 768px) --- */
 @media (min-width: 768px) {
   /* Sections prennent toute la largeur de l’écran */
@@ -182,40 +194,92 @@ section {
     width: 100%;
     padding: 0 2rem;
   }
+.h2Header{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 90%;
+  max-width: fit-content;
+  border-radius: 5px;
+  padding: 5px;
+}
 
-  /* Conteneurs gardent une marge */
-  .H1Container,
-  .H1Title,
-  .H1Subtitle,
-  .portrait {
-    margin: 1rem auto;
-    max-width: none;
-  }
+.h2Header img{
+  display: flex;
+  align-items: center;
+  width: 45%;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: auto;
+}
+.timeline{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-left: none;
+  border-top: var(--thirdary-color) 3px solid;
+  width: 100%;
+}
+.timelineItem {
+  display: flex;
+  flex: 1 1 250px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 350px;
+  min-height: 200px;
+  padding: 0 20px 20px 20px;
+  margin: 0;
 
-  /* Pour .h2Container on limite la largeur max et on centre */
-  .h2Container {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+}
+.timelineItem::before {
+  content: "";
+  position: relative;
+  left: -9px;
+  top: 10px;
+  width: 18px;
+  height: 18px;
+  background: var(--thirdary-color);
+  border-radius: 50%;
+}
+.timelineDate {
+  font-weight: bold;
+  font-size: large;
+  margin-top: 5px;
+  padding-left: 20px;
+  border: var(--thirdary-color) 1px solid;
+  border-radius: 5px;
+  color: var(--thirdary-color);
+  background-color: var(--primary-color);
+}
+.containerList,.h3Content{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px;
+}
 
-    max-width: 600px; /* Même max-width que le paragraphe sous H1 */
-    /* margin: 2rem auto; Centre horizontalement */
-    width: 100%; /* Prend toute la largeur jusqu'à max-width */
-    box-sizing: border-box;
-  }
-
-  .portrait {
-    display: flex;
-    align-items: stretch;
-    height: 100%;
-    flex: 0 0 300px;
-    margin-right: 2rem;
-  }
-
-  .portrait img {
-    margin: 0;
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-    display: block;  }
+.containerListItem{
+  flex: 1 1 200px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+.h2ContainerItem{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1 1 250px;
+  width: 100%;
+  margin-top: 20px;
+}
+.h2ContentTitle{
+  width: 30%;
+}
+.motivationList {
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 20px 10px 20px 30px;
+  border-radius: 10px;
+  width: 80%;
+}
 }

@@ -8,6 +8,10 @@ import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
 /*Image Import*/
 import portraitDylan from "../../assets/images/PortraitDylan.png";
+import runningConseilLogo from "../../assets/images/runningConseilLogo.png"
+import iutLogo from "../../assets/images/iutLogo.png";
+import keyceLogo from "../../assets/images/keyceLogo.png";
+import contentCreation from "../../assets/images/contentCreation.jpg";
 import instaPassion from "../../assets/images/instaPassion.png";
 import challengeIcon from "../../assets/icons/challengeIcon.png";
 import innovationIcon from "../../assets/icons/innovationIcon.png";
@@ -23,7 +27,7 @@ const About = () => {
     {
       title: "Chargé de développement",
       description: "CDD",
-      image: portraitDylan,
+      image: runningConseilLogo,
       date: "2022 - Aujourd'hui",
     },
     {
@@ -35,7 +39,7 @@ const About = () => {
     {
       title: "Créateur de contenu",
       description: "Auto-entrepreneur",
-      image: portraitDylan,
+      image: contentCreation,
       date: "2020 - Aujourd'hui",
     },
   ];
@@ -43,19 +47,19 @@ const About = () => {
     {
       title: "Master Management et stratégie d'entreprise",
       description :"Keyce Academy",
-      image: portraitDylan,
+      image: keyceLogo,
       date: "2025",
     },
        {
       title: "Licence Professionnelle Commerce et Distribution",
       description: "Institut Universitaire d'Avignon",
-      image: portraitDylan,
+      image: iutLogo,
       date: "2023",
     },
     {
       title: "Baccalauréat +2 Technique de Commercialisation",
       description: "Institut Universitaire d'Avignon",
-      image: portraitDylan,
+      image: iutLogo,
       date: "2022",
     },
  ]
@@ -85,14 +89,27 @@ const About = () => {
      description :"J'accorde une attention particulière aux détails pour garantir la qualité du travail.",
      image: detailsIcon,
    },
- ];
-
+   ];
+     const otherInterests = [
+     {
+       title: " 📷 Création de contenu vidéo",
+       description: "Je crée du contenu vidéo pour mes plateformes YouTube, Instagram et TikTok.",
+      },
+      {
+        title: "💻 Gestion de communauté",
+        description: "Je manage une communauté en ligne sur Discord et YouTube.",
+      },
+     {
+       title: "⚽ Pratique du foot",
+       description: " Depuis 10 ans, je joue au foot plusieurs fois par semaine.",
+     },
+    ]
   return (
     <>
       {/* Header */}
       <section className={styles.H1Container}>
         <div className={styles.H1Title}>
-          <h1>Qui suis-je vraiment?</h1>
+          <h1>Plus qu'un profil, une personnalité</h1>
         </div>
         <div className={styles.H1Subtitle}>
           <p>
@@ -105,22 +122,22 @@ const About = () => {
 
       {/* Portrait + expériences (frise verticale) */}
       <section className={styles.h2Container}>
+        <section className={styles.h2Header}>
         <div className={styles.portrait}>
           <img src={portraitDylan} alt="Dylan" />
-          <span className={styles.changePhoto}>changer de photo</span>
         </div>
-
         <div className={styles.keyExperience}>
           <div className={styles.h2Container}>
             <h2>Mon parcours et mes expériences personnelles</h2>
             <div className={styles.h2Content}>
               <p>
                 Un parcours qui allie passion et professionnalisme, avec une forte expérience dans le domaine du
-                développement <strong>commercial et marketing.</strong>
+                développement <strong>commercial et marketing digital.</strong>
               </p>
             </div>
           </div>
-
+        </div>
+        </section>
           {/* Timeline verticale */}
           <div className={styles.timeline}>
             {experiences.map((experience, index) => (
@@ -135,23 +152,23 @@ const About = () => {
                 </div>
               </div>
             ))}
-          </div>
-
+        </div>
           <div className={styles.buttonContainer}>
             <Button variant="primary" onClick={() => navigate("/experiences")}>
               Voir les détails
             </Button>
           </div>
-        </div>
       </section>
 
       {/* Compétences */}
       <section className={styles.h2Container}>
+        <div className={styles.h2ContainerItem}>
         <div className={styles.h2ContentTitle}>
         <h2>Mes compétences</h2>
         </div>
         <div className={styles.containerList}>
-          <h3 className={styles.h3Title}>Soft-Skills</h3>
+          <div className={styles.containerListItem}>
+          <h3 className={styles.h3Title}>Soft-Skills ⚙️⛓️</h3>
           <ul>
             <li>Communication</li>
             <li>Travail en équipe</li>
@@ -159,8 +176,9 @@ const About = () => {
             <li>Adaptabilité</li>
             <li>Sens du détail</li>
           </ul>
-
-          <h3 className={styles.h3Title}>Hard-Skills</h3>
+          </div>
+          <div className={styles.containerListItem}>
+          <h3 className={styles.h3Title}> Hard-Skills ⛓️‍💥</h3>
           <ul>
             <li>Analyse des besoins clients</li>
             <li>Négociation commerciale</li>
@@ -169,19 +187,28 @@ const About = () => {
             <li>Management</li>
             <li>Prospection et développement commercial</li>
           </ul>
-          <h3 className={styles.h3Title}>Langues</h3>
+          </div>
+          <div className={styles.containerListItem}>
+          <h3 className={styles.h3Title}>Langues 🗣️</h3>
           <ul>
             <li>Anglais courant (B1)</li>
             <li>Espagnol courant (B1)</li>
           </ul>
         </div>
+
+        </div>
+
+          </div>
       </section>
       {/* Portrait + expériences (frise verticale) */}
       <section className={styles.formation}>
-        <h2>Formation</h2>
+        <div className={styles.h2Container}>
+        <h2>Mes formations</h2>
         <p className={styles.formationText}>
-          Un parcours académique solide: à retravailler sous la forme d'une frise chronologique
+          De la théorie à la pratique, mes études m’ont appris à allier stratégie, communication et gestion opérationnelle. 
+          Cette combinaison me prépare à relever les défis d’un futur chef de projet avec confiance et rigueur.
         </p>
+        </div>
           <div className={styles.timeline}>
             {degree.map((degree, index) => (
               <div key={index} className={styles.timelineItem}>
@@ -196,46 +223,41 @@ const About = () => {
               </div>
             ))}
           </div>
-          <div className={styles.buttonContainer}>
-            <Button variant="primary" onClick={() => navigate("/experiences")}>
-              Voir les détails
-            </Button>
-          </div>
       </section>
       {/* Valeurs et motivations */}
       <section className={styles.h2Container}>
+        <div className={styles.h2ContainerItem}>
             <div className={styles.h2ContentTitle}>
                 <h2>Mes valeurs et motivations</h2>
-            </div>
-            <div className={styles.h2Content}>
-                <p><em>" Ce qui m'anime, c'est l'envie de créer, d'oser et de donner vie à des idées qui comptent." </em></p>
             </div>
             <div className={styles.motivationList}>
                 <ul>
                     {motivation.map((item, index) => (
                         <li key={index}>
-                            <strong>{item.title} <img src={item.image} alt={item.title} /></strong>: {item.description}
+                             <img src={item.image} alt={item.title} /> <strong>{item.title}</strong>: {item.description}
                         </li>
                     ))}
                 </ul>
             </div>
+        </div>
       </section>
-
-      <section className={styles.h2Container}>
-        <div className={styles.passionContainer}>
-          <h2>En dehors du travail</h2>
-          <h3 className={styles.h3Title}>Mes autres centres d'intérêt</h3>
-          <div className={styles.passionList}>
-            <ul>
-              <li> ▪️ Création de contenu vidéo sur réseaux sociaux (Youtube, Instagram)</li>
-              <li> ▪️ Pratique du foot depuis 10 ans</li>
-              <li> ▪️ Gestionnaire d'une communauté en ligne (Discord, YouTube)</li>
-            </ul>
-             {/* <ProjectCard/> */}
-          </div>
-          <div className={styles.pContainer}>
+            <section className={styles.h2Container}>
+        <div className={styles.h2ContainerItem}>
+            <div className={styles.h2ContentTitle}>
+                <h2>Mes autres centres d'intérêt</h2>
+            </div>
+            <div className={styles.interestList}>
+                <ul>
+                    {otherInterests.map((item, index) => (
+                        <li key={index}>
+                             <strong>{item.title}</strong>: {item.description}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </div>
+        <div className={styles.pContainer}>
             <p>Prêt à relever de nouveaux défis ? <a href="/contact">Contactez-moi !</a></p>
-          </div>
         </div>
       </section>
     </>
