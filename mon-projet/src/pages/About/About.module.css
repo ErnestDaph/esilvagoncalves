@@ -1,0 +1,289 @@
+:root {
+    --primary-color: #F0E1D1;
+    --secondary-color: #3967a7;
+    --thirdary-color: #0e1a27;
+}
+
+.H1Container {
+    width: auto;
+    height: auto;
+    margin: 20px 0;
+}
+.h2ContentTitle{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+}
+H1, H2, H3, H4, legend {
+     text-align: left;
+     margin: 0.5rem 0;
+     color: var(--thirdary-color);
+}
+.timelineContent, h3{
+  color: var(--primary-color)
+}
+.h3Title{
+  color: var(--thirdary-color);
+  font-size: 20px;
+}
+a{
+  color: var(--thirdary-color);
+  text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    color: var(--thirdary-color);
+}
+legend{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.H1Subtitle,.h2Content, 
+.experienceDescriptionText,
+.formationText,
+.projetsText,
+.passionText {
+    text-align: left;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    color: var(--thirdary-color);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+.contenainerList {
+    justify-self: unset;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    color: var(--thirdary-color);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+.containerList,.passionList{
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  padding: 10px;
+}
+.pContainer{
+  color: var(--thirdary-color);
+  border-radius: 5px;
+  padding: 10px;
+}
+.timelineDescription{
+  color: var(--primary-color);
+}
+ul, li, span, p{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--thirdary-color);
+}
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.buttonContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timelineItem {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    width: 100%;
+
+ 
+}
+.H1Container,
+.h2Container,
+.H1Title,
+.H1Subtitle,
+.portrait {
+  margin: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portrait img{
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px
+}
+
+.timeline {
+  position: relative;
+  margin: 30px 0;
+  padding-left: 30px;
+  border-left: 3px solid var(--thirdary-color);
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timelineItem::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 10px;
+  width: 18px;
+  height: 18px;
+  background: var(--thirdary-color);
+  border-radius: 50%;
+}
+
+.timelineDate {
+  font-weight: bold;
+  font-size: large;
+  margin-top: 5px;
+  padding-left: 20px;
+  border: var(--thirdary-color) 1px solid;
+  border-radius: 5px;
+  color: var(--thirdary-color);
+  background-color: var(--primary-color);
+}
+
+.timelineContent {
+  background: var(--thirdary-color);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.timelineImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.motivationList img{
+  width: 30px;
+  height: 30px;
+  margin: 5px 5px 0 0;
+
+}
+.motivationList, .interestList{
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+}
+/* --- Desktop version (à partir de 768px) --- */
+@media (min-width: 768px) {
+  /* Sections prennent toute la largeur de l’écran */
+  section {
+    height: auto;
+    width: 100%;
+    padding: 0 2rem;
+  }
+.h2Header{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 90%;
+  max-width: fit-content;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.h2Header img{
+  display: flex;
+  align-items: center;
+  width: 45%;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: auto;
+}
+.timeline{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  border-left: none;
+  border-top: var(--thirdary-color) 3px solid;
+  width: 100%;
+}
+.timelineItem {
+  display: flex;
+  flex: 1 1 250px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 350px;
+  min-height: 200px;
+  padding: 0 20px 20px 20px;
+  margin: 0;
+
+}
+.timelineItem::before {
+  content: "";
+  position: relative;
+  left: -9px;
+  top: 10px;
+  width: 18px;
+  height: 18px;
+  background: var(--thirdary-color);
+  border-radius: 50%;
+}
+.timelineDate {
+  font-weight: bold;
+  font-size: large;
+  margin-top: 5px;
+  padding-left: 20px;
+  border: var(--thirdary-color) 1px solid;
+  border-radius: 5px;
+  color: var(--thirdary-color);
+  background-color: var(--primary-color);
+}
+.containerList,.h3Content{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.containerListItem{
+  flex: 1 1 200px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+.h2ContainerItem{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1 1 250px;
+  width: 100%;
+  margin-top: 20px;
+}
+.h2ContentTitle{
+  width: 30%;
+}
+.motivationList {
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 20px 10px 20px 30px;
+  border-radius: 10px;
+  width: 80%;
+}
+}
