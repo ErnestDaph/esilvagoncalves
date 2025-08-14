@@ -147,7 +147,7 @@ const About = () => {
                   <img src={experience.image} alt={experience.title} className={styles.timelineImage} />
                   <div>
                     <h3>{experience.title}</h3>
-                    <p>{experience.description}</p>
+                    <p className={styles.timelineDescription}>{experience.description}</p>
                   </div>
                 </div>
               </div>

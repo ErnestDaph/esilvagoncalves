@@ -74,6 +74,9 @@ legend{
   border-radius: 5px;
   padding: 10px;
 }
+.timelineDescription{
+  color: var(--primary-color);
+}
 ul, li, span, p{
   list-style: none;
   padding: 0;
