@@ -5,12 +5,9 @@
     --fourthary-color: rgba(14, 26, 39, 0.89);
 }
 /* Mobile version*/
-.projectCard{
-    background-color: var(--fourthary-color);
-    border-radius: 8px;
-    padding: 10px;
-    flex-direction: row;
-}
+   .projectCard {
+    background-color: var(--secondary-color);
+   }
 
 /* Desktop version*/
 @media (max-width: 768px) {

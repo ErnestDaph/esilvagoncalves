@@ -9,7 +9,7 @@ import portraitDylan from "../../assets/images/PortraitDylan.png";
 import runningConseilLogo from "../../assets/images/runningConseilLogo.png"
 import iutLogo from "../../assets/images/iutLogo.png";
 import keyceLogo from "../../assets/images/keyceLogo.png";
-import contentCreation from "../../assets/images/contentCreation.jpg";
+import goSportLogo from "../../assets/images/goSportLogo.png"
 import challengeIcon from "../../assets/icons/challengeIcon.png";
 import innovationIcon from "../../assets/icons/innovationIcon.png";
 import learningIcon from "../../assets/icons/learningIcon.png";
@@ -34,10 +34,10 @@ const About = () => {
       date: "2022 - Aujourd'hui",
     },
     {
-      title: "Créateur de contenu",
-      description: "Auto-entrepreneur",
-      image: contentCreation,
-      date: "2020 - Aujourd'hui",
+      title: "Conseiller commercial",
+      description: "Stage",
+      image: goSportLogo,
+      date: "Avril 2022 - Juin 2022",
     },
   ];
  const degree = [
@@ -151,7 +151,7 @@ const About = () => {
             ))}
         </div>
           <div className={styles.buttonContainer}>
-            <Button variant="primary" onClick={() => navigate("/experiences")}>
+            <Button variant="primary" onClick={() => navigate("/experience")}>
               Voir les détails
             </Button>
           </div>
