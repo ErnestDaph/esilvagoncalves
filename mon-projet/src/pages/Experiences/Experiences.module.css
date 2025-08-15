@@ -5,20 +5,39 @@
 }
 
 /*Mobile version*/
-.h1container{
-    display: flex;
-    flex-direction: column;
-}
 .h1content{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
 }
-.h2header{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-bottom: 20px;
+.h2Description{
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
 }
-
 /*Desktop version*/
+@media (min-width: 768px) {
+    .h2Content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .h2Description{
+
+        padding: 20px;
+        margin-bottom: 30px;
+        border-radius: 15px;
+        background-color: var(--primary-color);
+    }
+    .projectCardContainer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+}

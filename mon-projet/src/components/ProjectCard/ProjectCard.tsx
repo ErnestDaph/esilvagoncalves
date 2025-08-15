@@ -37,6 +37,15 @@ function ProjectCard (){
             point2: "Vente de produits et services spécialisés dans l’univers sportif, avec un suivi attentif de la satisfaction client.",
             point3: "Interaction et modération : suivi attentif des messages et commentaires pour maintenir un échange positif et constructif, en respect des valeurs de l’entreprise.",
             point4: "Gestion opérationnelle du magasin : étiquetage, mise en rayon, préparation des soldes, suivi des stocks et réception des livraisons.",
+        },
+                {
+            image: goSportLogo,
+            title: "Conseiller commercial - Stage (3 mois)",
+            description :"J’ai occupé ce poste afin de contribuer à la satisfaction et à la fidélisation de la clientèle, tout en participant activement à la promotion et à la mise en valeur des produits liés au sport.", 
+            point1: "Accompagnement et conseil personnalisé des clients, en répondant à leurs besoins et en facilitant la négociation.",
+            point2: "Vente de produits et services spécialisés dans l’univers sportif, avec un suivi attentif de la satisfaction client.",
+            point3: "Interaction et modération : suivi attentif des messages et commentaires pour maintenir un échange positif et constructif, en respect des valeurs de l’entreprise.",
+            point4: "Gestion opérationnelle du magasin : étiquetage, mise en rayon, préparation des soldes, suivi des stocks et réception des livraisons.",
         }
     ]
     const [showAllStates, setShowAllStates] = useState(content.map(() => false));
