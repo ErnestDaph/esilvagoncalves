@@ -1,14 +1,15 @@
 import styles from "./ProjectCard.module.css";
+import {useState} from "react";
 
 /* media import*/
-import runningConseilLogo from '../../assets/images/runningConseilLogo.png';
+import runningConseilLogo2 from "../../assets/images/runningConseilLogo2.png";
 import goSportLogo from "../../assets/images/goSportLogo.png"
 
 
 function ProjectCard (){
     const content = [
         {
-            image: runningConseilLogo,
+            image: runningConseilLogo2,
             title: "Chargé de développement commercial - CDD (2 ans)",
             description : "J'ai occupé ce poste afin de participer au développement de la clientèle et à la promotion des produits de l'entreprise.",
             point1: "Commercialisation de produits et services dédiés au running, avec un accompagnement client sur mesure.",
@@ -20,8 +21,8 @@ function ProjectCard (){
             point7: "Supervision complète de la gestion des stocks, de la réception des marchandises au suivi logistique et au traitement des services après-vente.",
         },
          {
-            image: runningConseilLogo,
-            title: "Community Manager - CDD (2 ans)",
+            image: runningConseilLogo2,
+            title: "Community manager - CDD (2 ans)",
             description :"J'ai occupé ce poste afin de renforcer la présence digitale de l'entreprise, d'engager la communauté et de valoriser les produits et services auprès d'un public ciblé.", 
             point1: "Élaboration et pilotage de la stratégie de contenu : conception d’un plan éditorial aligné sur les objectifs de l’entreprise, garantissant la pertinence et l’impact des publications.",
             point2: "Animation des réseaux sociaux : gestion et alimentation quotidienne des comptes (Facebook, Instagram), avec un contenu engageant et adapté à chaque audience.",
@@ -38,33 +39,64 @@ function ProjectCard (){
             point4: "Gestion opérationnelle du magasin : étiquetage, mise en rayon, préparation des soldes, suivi des stocks et réception des livraisons.",
         }
     ]
-        return (
-            <div className={styles.projectCard}>
-                <div className={styles.cards}>
-                    {content.map((item, index) => {
-                    const points = Object.keys(item).filter((key) => key.startsWith("point") && item[key]).map((key) => item[key]);
-                    return (
-                        <div key={index} className={styles.card}>
-                        {item.image && (
-                            <img
-                            src={item.image}
-                            alt={item.title}
-                            className={styles.cardImage}
-                            />
+    const [showAllStates, setShowAllStates] = useState(content.map(() => false));
+        const toggleShowAll = (index) => {
+    const newStates = [...showAllStates];
+    newStates[index] = !newStates[index];
+    setShowAllStates(newStates);
+};
+
+return (
+    <div className={styles.projectCardContainer}>
+        <div className={styles.cards}>
+            {content.map((item, index) => {
+                const points = Object.keys(item)
+                    .filter((key) => key.startsWith("point") && item[key])
+                    .map((key) => item[key]);
+
+                const visiblePoints = showAllStates[index] ? points : points.slice(0, 2);
+
+                return (
+                    <div key={index} className={styles.card}>
+                        <div className={styles.cardContent}>
+                            <div className={styles.cardHeader}>
+                                <div className ={styles.cardLogo}>
+                                    {item.image && (
+                                        <img
+                                            src={item.image}
+                                            alt={item.title}
+                                            className={styles.cardImage}
+                                        />
+                                    )}
+                                </div>
+                                <h3 className={styles.cardTitle}>{item.title}</h3>
+                            </div>
+                            <div className={styles.cardBody}>
+                                <div className={styles.cardContext}>
+                                    <p className={styles.cardText}>📍 Contexte :</p>
+                                    <p className={styles.cardText}>{item.description}</p>
+                                </div>
+                                <div className={styles.cardMissions}>
+                                    <p className={styles.cardText}><em>~ Mes missions ~</em></p>
+                                    {visiblePoints.map((point, i) => (
+                                        <p key={i} className={styles.cardText}>▫️ {point}</p>
+                                    ))}
+                                </div>
+                            </div>
+                        {points.length > 2 && (
+                            <button
+                                className={styles.showMoreButton}
+                                onClick={() => toggleShowAll(index)}
+                            >
+                                {showAllStates[index] ? "Voir moins" : "Voir plus"}
+                            </button>
                         )}
-                        <h3 className={styles.cardTitle}>{item.title}</h3>
-                        <p><strong>📍 Contexte :</strong><br />{item.description}</p>
-                        <p><em>~ Mes missions ~</em></p>
-                        {points.map((point, i) => (
-                            <p key={i} className={styles.description}>
-                            ▪️ {point}
-                            </p>
-                        ))}
                         </div>
-                    );
-                    })}
-                </div>
-            </div>
-        );
+                    </div>
+                );
+            })}
+        </div>
+    </div>
+);
 }
 export default ProjectCard;

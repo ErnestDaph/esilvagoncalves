@@ -3,3 +3,22 @@
     --secondary-color: #3967a7;
     --thirdary-color: #0e1a27;
 }
+
+/*Mobile version*/
+.h1container{
+    display: flex;
+    flex-direction: column;
+}
+.h1content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.h2header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+/*Desktop version*/

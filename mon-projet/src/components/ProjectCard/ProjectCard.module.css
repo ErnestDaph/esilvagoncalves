@@ -2,19 +2,67 @@
     --primary-color: #F0E1D1;
     --secondary-color: #3967a7;
     --thirdary-color: rgb(14, 26, 39);
-    --fourthary-color: rgba(14, 26, 39, 0.89);
+    --fourthary-color: rgb(109, 108, 108);
 }
 /* Mobile version*/
-   .projectCard {
-    background-color: var(--secondary-color);
+   .projectCardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 40px;
+    background-color: var(--fourthary-color);
    }
 
+   .card{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--thirdary-color);
+   }
+.cardLogo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+   }
+.cardImage{
+    width: 120px;
+    height: 100px;
+    object-fit: cover;
+}
+.cardContext,.cardMissions{
+    padding: 10px 5px 10px 5px;
+
+}
+.cardBody {
+    color: var(--primary-color);
+    border-top: var(--primary-color) .3px solid;
+}
+.cardText{
+    color: var(--primary-color);
+    padding: 5px 0;
+}
+button{
+    width: 100%;
+    color: var(--thirdary-color);
+    background-color: var(--primary-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+button:hover{
+    width: 100%;
+    color: var(--primary-color);
+    background-color: var(--thirdary-color);
+}
 /* Desktop version*/
 @media (max-width: 768px) {
-    .projectCard {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin: 0 auto;
-    }
+   .projectCardContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 30px;
+    border-radius: 40px;
+    background-color: var(--fourthary-color);
+   }
 }
