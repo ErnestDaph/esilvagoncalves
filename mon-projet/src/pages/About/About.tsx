@@ -16,7 +16,7 @@ import learningIcon from "../../assets/icons/learningIcon.png";
 import managementIcon from "../../assets/icons/managementIcon.png";
 import detailsIcon from "../../assets/icons/detailsIcon.png";
 
-
+/* voir le CSS de la dernière section*/
 const About = () => {
   const navigate = useNavigate();
 

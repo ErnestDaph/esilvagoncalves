@@ -1,4 +1,3 @@
-import React from "react";;
 import styles from "./Footer.module.css";
 import LinkedinLogo from '../../assets/icons/linkedinLogo.png';
 import TiktokLogo from '../../assets/icons/tiktokLogo.png';
@@ -32,7 +31,7 @@ function Footer() {
             </section>  
             <section className={styles.footerCopyrightContainer}> 
                 <div className={styles.footerCopyright}>
-                    <p>© Dylan E Silva Goncalves –  {new Date().getFullYear()}</p>
+                    <p className={styles.footerCopyrightText}>© Dylan E Silva Goncalves –  {new Date().getFullYear()}</p>
                 </div>
             </section>
         </footer>
