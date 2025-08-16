@@ -2,6 +2,7 @@
 import styles from "../Contact/Contact.module.css";
 import portraitDylan from "../../assets/images/PortraitDylan.png";
 
+/* trouver le moyen de rajouter ifram pour le formulaire de contact  (googleForm)*/
 const Contact = () =>{
     return (
       <>

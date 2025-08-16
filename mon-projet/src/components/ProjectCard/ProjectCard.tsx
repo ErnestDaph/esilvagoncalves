@@ -5,6 +5,7 @@ import {useState} from "react";
 import runningConseilLogo2 from "../../assets/images/runningConseilLogo2.png";
 import goSportLogo from "../../assets/images/goSportLogo.png"
 
+/* faire en sorte que l'ensemble des compétences de l'ensmeble des items soient affichées lorsqu'on clique sur le bouton voir plus*/ 
 
 function ProjectCard (){
     const content = [

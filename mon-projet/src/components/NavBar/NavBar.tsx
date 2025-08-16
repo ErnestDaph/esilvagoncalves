@@ -3,7 +3,11 @@ import styles from "./NavBar.module.css";
 import DylanAvatar from '../../assets/icons/DylanAvatar.png'
 import barMenu from '../../assets/icons/barMenu.png'
 
-
+/* 
+- rajouter un soulignement sur la page affichée 
+- rajouter le nom ainsi que le prénom de Dylan
+- modifier le lien de l'avatar
+- faire des liens dynamiques (pages)*/
 function Navbar() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -12,7 +16,7 @@ function Navbar() {
     return (
         <nav className={styles.navbar}>
             <div className={styles.logo}>
-               <a href="#home"><img src={DylanAvatar} alt="Logo" /></a>
+               <p className={styles.name}>Dylan E Silva Goncalves</p>
             </div>
             <a href="#menu" className={styles.burger} onClick={toggleMenu}><img src={barMenu} alt="Menu" /></a>
             <ul className={`${styles.menu} ${isOpen ? styles.menuOpen : ''}`}>
@@ -26,3 +30,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

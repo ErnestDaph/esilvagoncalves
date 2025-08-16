@@ -3,9 +3,22 @@
     --secondary-color: #3967a7;
     --thirdary-color: #0e1a27;
 }
+.logo {
+  border-radius: 5px;
+  border: var(--primary-color) 2px solid;
+}
 .logo img {
     width: 40px;
     height: 40px;
+    display: flex;
+  
+}
+.logo, .name{
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  padding: 8px 16px 8px 16px;
+  color: var(--primary-color);
 }
 .navbar{
     display: flex;

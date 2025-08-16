@@ -1,7 +1,7 @@
 :root {
     --primary-color: #F0E1D1;
     --secondary-color: #3967a7;
-    --thirdary-color: #0e1a27;
+    --thirdary-color: #2b2c2cb2;
 }
 
 /*Mobile version*/
@@ -16,6 +16,37 @@
     border-radius: 10px;
     background-color: var(--primary-color);
 }
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.h3Skills{
+    color: var(--thirdary-color);
+}
+.skillsList{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+}
+.test{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.testText{
+    padding: 10px;
+    border: 1px solid var(--thirdary-color);
+    border-radius: 10px;
+    color: var(--thirdary-color);
+    background-color: var(--primary-color);
+}
+.clientTest{
+    font-size: small;
+    color: var(--thirdary-color);
+}
+
 /*Desktop version*/
 @media (min-width: 768px) {
     .h2Content{
@@ -24,7 +55,6 @@
         width: 100%;
     }
     .h2Description{
-
         padding: 20px;
         margin-bottom: 30px;
         border-radius: 15px;
